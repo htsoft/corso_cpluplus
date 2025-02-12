@@ -1,1 +1,14 @@
-﻿
+﻿JThreadExample.obj : error LNK2005: main già definito in AtomicExample.obj
+MutexExample.obj : error LNK2005: main già definito in AtomicExample.obj
+MutexLockGuard.obj : error LNK2005: "void __cdecl slow_increment(int)" (?slow_increment@@YAXH@Z) già definito in MutexExample.obj
+MutexLockGuard.obj : error LNK2005: main già definito in AtomicExample.obj
+MutexLockGuard.obj : error LNK2005: "int g_num" (?g_num@@3HA) già definito in MutexExample.obj
+MutexLockGuard.obj : error LNK2005: "class std::mutex g_num_mutex" (?g_num_mutex@@3Vmutex@std@@A) già definito in MutexExample.obj
+MutextTryLock.obj : error LNK2005: main già definito in AtomicExample.obj
+SemaphoreAcquire.obj : error LNK2005: main già definito in AtomicExample.obj
+SemaphoreExample.obj : error LNK2005: main già definito in AtomicExample.obj
+ThreadDestructor.obj : error LNK2005: main già definito in AtomicExample.obj
+ThreadDetach.obj : error LNK2005: main già definito in AtomicExample.obj
+ThreadExample.obj : error LNK2005: main già definito in AtomicExample.obj
+ThreadJoin.obj : error LNK2005: main già definito in AtomicExample.obj
+D:\Progetti\Corsi\CorsoCPluPlus\x64\Debug\CorsoCPluPlus.exe : fatal error LNK1169: rilevato uno o più simboli definiti più volte
