@@ -18,6 +18,18 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="JThreadExample.cpp" />
+    <ClCompile Include="MutexExample.cpp" />
+    <ClCompile Include="MutexLockGuard.cpp" />
+    <ClCompile Include="MutextTryLock.cpp" />
+    <ClCompile Include="SemaphoreAcquire.cpp" />
+    <ClCompile Include="SemaphoreExample.cpp" />
+    <ClCompile Include="ThreadDestructor.cpp" />
+    <ClCompile Include="ThreadDetach.cpp" />
+    <ClCompile Include="ThreadExample.cpp" />
+    <ClCompile Include="ThreadJoin.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -104,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,12 +139,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="MutexExample.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="MutexExample.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

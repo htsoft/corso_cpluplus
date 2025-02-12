@@ -10,11 +10,10 @@ void slow_increment(int id)
 {
     for (int i = 0; i < 3; ++i)
     {
-        g_num_mutex.lock();
+        std::lock_guard<std::mutex> lock(g_num_mutex);
         ++g_num;
         // note, that the mutex also syncronizes the output
         std::cout << "id: " << id << ", g_num: " << g_num << '\n';
-        g_num_mutex.unlock();
 
         std::this_thread::sleep_for(std::chrono::milliseconds(234));
     }

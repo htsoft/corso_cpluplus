@@ -15,12 +15,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MutexExample.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="ThreadExample.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadDestructor.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadJoin.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadDetach.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
     <ClCompile Include="MutexExample.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="MutextTryLock.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="MutexLockGuard.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="SemaphoreExample.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="SemaphoreAcquire.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="JThreadExample.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
