@@ -19,17 +19,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AritmeticaPuntatori.cpp" />
+    <ClCompile Include="AritmeticaPuntatori2.cpp" />
+    <ClCompile Include="AritmeticaPuntatori3.cpp" />
     <ClCompile Include="AtomicExample.cpp" />
+    <ClCompile Include="ComPtrExample.cpp" />
     <ClCompile Include="JThreadExample.cpp" />
     <ClCompile Include="MutexExample.cpp" />
     <ClCompile Include="MutexLockGuard.cpp" />
     <ClCompile Include="MutextTryLock.cpp" />
+    <ClCompile Include="PuntatoriFunzioni.cpp" />
+    <ClCompile Include="PuntatoriNonElaboratiExample.cpp" />
+    <ClCompile Include="PuntatoriVoid.cpp" />
+    <ClCompile Include="SafeQueue.cpp" />
     <ClCompile Include="SemaphoreAcquire.cpp" />
     <ClCompile Include="SemaphoreExample.cpp" />
+    <ClCompile Include="SharedPtrExample.cpp" />
+    <ClCompile Include="SharedPtrExample2.cpp" />
     <ClCompile Include="ThreadDestructor.cpp" />
     <ClCompile Include="ThreadDetach.cpp" />
     <ClCompile Include="ThreadExample.cpp" />
     <ClCompile Include="ThreadJoin.cpp" />
+    <ClCompile Include="UniquePtrExample.cpp" />
+    <ClCompile Include="WeakPtrExample.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
