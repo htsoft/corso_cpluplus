@@ -32,6 +32,7 @@ std::unique_ptr<D> pass_through(std::unique_ptr<D> p)
 // helper function for the custom deleter demo below
 void close_file(std::FILE* fp)
 {
+	std::cout << "close_file\n";
     std::fclose(fp);
 }
 
@@ -58,6 +59,9 @@ struct List
         }
     }
 
+    // Gli elementi vengono aggiunti sempre in testa
+    // Head 0x0100
+	// Head 0x0200 -> 0x0100
     void push(int data)
     {
         head = std::unique_ptr<Node>(new Node{ data, std::move(head) });
@@ -76,14 +80,13 @@ int main()
         std::unique_ptr<D> q = pass_through(std::move(p));
 
         // p is now in a moved-from 'empty' state, equal to nullptr
-        assert(!p);
+        assert(!p); // p = nullptr;
     }
 
     std::cout << "\n" "2) Runtime polymorphism demo\n";
     {
         // Create a derived resource and point to it via base type
         std::unique_ptr<B> p = std::make_unique<D>();
-
         // Dynamic dispatch works as expected
         p->bar();
     }
@@ -144,6 +147,7 @@ D::~D
 
 3) Custom deleter demo
 x
+close_file
 
 4) Custom lambda-expression deleter and exception safety demo
 D::D

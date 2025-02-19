@@ -53,9 +53,10 @@ int main()
     MyClass* pmc2 = pmc;
 
     // Use copied pointer to modify the original object
-    pmc2->name = "Erika";
+	pmc2->name = "Erika"; 
     pmc->print(); // "Erika, 108"
     pmc2->print(); // "Erika, 108"
+
 
     // Pass the pointer to a function.
     func_A(pmc);
@@ -70,3 +71,4 @@ int main()
     delete(pmc); // don't forget to give memory back to operating system!
     // delete(pmc2); //crash! memory location was already deleted
 }
+

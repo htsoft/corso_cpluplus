@@ -47,3 +47,11 @@ int main()
     std::cout << ch << std::endl; // 'A'
     operator delete(pvoid);
 }
+
+MyClass* mc = new MyClass{ 10, "Marian" };
+void* p = static_cast<void*>(mc);
+char* pchar = static_cast<char*>(p);
+for (char* c = pchar; c < pchar + sizeof(&mc); ++c)
+{
+    *c = 0x00;
+}

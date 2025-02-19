@@ -13,8 +13,14 @@ void func(int arr[], int length)
 
 int main()
 {
+    void* p = operator new(1000);
+	char* c = static_cast<char*>(p);
+    std::cout << sizeof(&c) << "\n";
+
     int i[5]{ 1,2,3,4,5 };
     // sizeof(i) = total bytes
     int j = sizeof(i) / sizeof(i[0]);
+
     func(i, j);
 }
+

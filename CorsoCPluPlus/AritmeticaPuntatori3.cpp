@@ -32,7 +32,7 @@ int main()
 
     while (p < end)
     {
-        // Is top or bottom edge?
+        // Is top or bottom edge? 
         if ((p < begin + header.biWidth * pixelWidth * borderWidth)
             || (p > end - header.biWidth * pixelWidth * borderWidth)
             // Is left or right edge?
@@ -57,3 +57,4 @@ int main()
     delete[] buffer; // Return memory to the OS.
     wf.close();
 }
+

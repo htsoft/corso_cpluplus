@@ -32,10 +32,19 @@ int main()
     DEMO(cont.use_count());
     DEMO(cont->memberObj.use_count());
 
+    //Creating shared container
+    //cont.use_count() = 1
+    //cont->memberObj.use_count() = 0
+
     COUT("Creating member");
     cont->CreateMember();
     DEMO(cont.use_count());
     DEMO(cont->memberObj.use_count());
+
+    //Creating member
+    //MyObj constructed
+    //cont.use_count() = 1
+    //cont->memberObj.use_count() = 1
 
     COUT("Creating another shared container");
     std::shared_ptr<Container> cont2 = cont;
@@ -44,6 +53,12 @@ int main()
     DEMO(cont2.use_count());
     DEMO(cont2->memberObj.use_count());
 
+    //Creating another shared container
+    //cont.use_count() = 2
+    //cont->memberObj.use_count() = 1
+    //cont2.use_count() = 2
+    //cont2->memberObj.use_count() = 1
+
     COUT("GetAsMyObj");
     std::shared_ptr<MyObj> myobj1 = cont->GetAsMyObj();
     DEMO(myobj1.use_count());
@@ -51,6 +66,13 @@ int main()
     DEMO(cont->memberObj.use_count());
     DEMO(cont2.use_count());
     DEMO(cont2->memberObj.use_count());
+
+    //GetAsMyObj
+    //myobj1.use_count() = 3
+    //cont.use_count() = 3
+    //cont->memberObj.use_count() = 1
+    //cont2.use_count() = 3
+    //cont2->memberObj.use_count() = 1
 
     COUT("Copying alias obj");
     std::shared_ptr<MyObj> myobj2 = myobj1;
@@ -61,6 +83,14 @@ int main()
     DEMO(cont2.use_count());
     DEMO(cont2->memberObj.use_count());
 
+    //Copying alias obj
+    //myobj1.use_count() = 4
+    //myobj2.use_count() = 4
+    //cont.use_count() = 4
+    //cont->memberObj.use_count() = 1
+    //cont2.use_count() = 4
+    //cont2->memberObj.use_count() = 1
+
     COUT("Resetting cont2");
     cont2.reset();
     DEMO(myobj1.use_count());
@@ -68,16 +98,34 @@ int main()
     DEMO(cont.use_count());
     DEMO(cont->memberObj.use_count());
 
+    //Resetting cont2
+    //myobj1.use_count() = 3
+    //myobj2.use_count() = 3
+    //cont.use_count() = 3
+    //cont->memberObj.use_count() = 1
+
     COUT("Resetting myobj2");
     myobj2.reset();
     DEMO(myobj1.use_count());
     DEMO(cont.use_count());
     DEMO(cont->memberObj.use_count());
 
+    //Resetting myobj2
+    //myobj1.use_count() = 2
+    //cont.use_count() = 2
+    //cont->memberObj.use_count() = 1
+
+
     COUT("Resetting cont");
     cont.reset();
     DEMO(myobj1.use_count());
     DEMO(cont.use_count());
+
+    //Resetting cont
+    //myobj1.use_count() = 1
+    //cont.use_count() = 0
+    //MyObj destructed
+
 }
 
 /*
