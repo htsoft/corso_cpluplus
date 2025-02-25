@@ -9,24 +9,30 @@ void show_error(unsigned int handleType, const SQLHANDLE& handle) {
         std::cout << "SQL driver message: " << message << "\nSQL state: " << SQLState << "." << std::endl;
 }
 
+struct Persona {
+	SQLINTEGER id;
+	SQLWCHAR name[64];
+	SQLWCHAR surname[64];
+};
+
 int main() {
     SQLHANDLE sqlEnvHandle;
     SQLHANDLE sqlConnHandle;
     SQLHANDLE sqlStmtHandle;
     SQLRETURN retCode = 0;
+    Persona p;
 
-    do {
         if (SQL_SUCCESS != SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &sqlEnvHandle))
-            break;
+            return -1;
 
         if (SQL_SUCCESS != SQLSetEnvAttr(sqlEnvHandle, SQL_ATTR_ODBC_VERSION, (SQLPOINTER)SQL_OV_ODBC3, 0))
-            break;
+            return -1;
 
         if (SQL_SUCCESS != SQLAllocHandle(SQL_HANDLE_DBC, sqlEnvHandle, &sqlConnHandle))
-            break;
+            return -1;
 
         SQLCHAR retConString[1024];
-        switch (SQLDriverConnect(sqlConnHandle, NULL, (SQLCHAR*)"DRIVER={SQL Server};SERVER=localhost, 1433;DATABASE=Prova;UID=your_username;PWD=your_password;", SQL_NTS, retConString, 1024, NULL, SQL_DRIVER_NOPROMPT)) {
+        switch (SQLDriverConnect(sqlConnHandle, NULL, (SQLWCHAR*)L"DRIVER={SQL Server};SERVER=localhost, 1433;DATABASE=Prova;UID=your_username;PWD=your_password;", SQL_NTS, retConString, 1024, NULL, SQL_DRIVER_NOPROMPT)) {
             case SQL_SUCCESS_WITH_INFO:
                 show_error(SQL_HANDLE_DBC, sqlConnHandle);
                 break;
@@ -40,24 +46,22 @@ int main() {
         }
 
         if (retCode == -1)
-            break;
+            return -1;
 
         if (SQL_SUCCESS != SQLAllocHandle(SQL_HANDLE_STMT, sqlConnHandle, &sqlStmtHandle))
-            break;
+            return -1;
 
-        if (SQL_SUCCESS != SQLExecDirect(sqlStmtHandle, (SQLCHAR*)"SELECT * FROM persona;", SQL_NTS)) {
+        if (SQL_SUCCESS != SQLExecDirect(sqlStmtHandle, (SQLWCHAR*)L"SELECT * FROM persona;", SQL_NTS)) {
             show_error(SQL_HANDLE_STMT, sqlStmtHandle);
-            break;
+            return -1;
         } else {
-            SQLCHAR name[64];
-            SQLINTEGER id;
             while (SQLFetch(sqlStmtHandle) == SQL_SUCCESS) {
-                SQLGetData(sqlStmtHandle, 1, SQL_C_ULONG, &id, 0, NULL);
-                SQLGetData(sqlStmtHandle, 2, SQL_C_CHAR, name, sizeof(name), NULL);
-                std::cout << "ID: " << id << " Name: " << name << std::endl;
+                SQLGetData(sqlStmtHandle, 1, SQL_C_ULONG, &p.id, 0, NULL);
+                SQLGetData(sqlStmtHandle, 2, SQL_C_CHAR, &p.name, sizeof(p.name), NULL);
+                SQLGetData(sqlStmtHandle, 3, SQL_C_CHAR, &p.surname, sizeof(p.surname), NULL);
+                std::cout << "ID: " << p.id << " Name: " << p.name << " Surname: " << p.surname << std::endl;
             }
         }
-    } while (false);
 
     SQLFreeHandle(SQL_HANDLE_STMT, sqlStmtHandle);
     SQLDisconnect(sqlConnHandle);

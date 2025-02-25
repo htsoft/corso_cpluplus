@@ -25,11 +25,14 @@
     <ClCompile Include="AtomicExample.cpp" />
     <ClCompile Include="ComPtrExample.cpp" />
     <ClCompile Include="DataBaseConnectivity.cpp" />
+    <ClCompile Include="EsercitazioneFinale.cpp" />
     <ClCompile Include="InstallazioneOpenSSLSuiSistemiUtente.cpp" />
     <ClCompile Include="JThreadExample.cpp" />
     <ClCompile Include="MutexExample.cpp" />
     <ClCompile Include="MutexLockGuard.cpp" />
     <ClCompile Include="MutextTryLock.cpp" />
+    <ClCompile Include="MySQLODBC.cpp" />
+    <ClCompile Include="MySQLProgram.cpp" />
     <ClCompile Include="ODBCSql.cpp" />
     <ClCompile Include="OWASPAESExample.cpp" />
     <ClCompile Include="OWASPBufferOverflow.cpp" />
@@ -51,6 +54,9 @@
     <ClCompile Include="ThreadJoin.cpp" />
     <ClCompile Include="UniquePtrExample.cpp" />
     <ClCompile Include="WeakPtrExample.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Esercizio.CSV" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

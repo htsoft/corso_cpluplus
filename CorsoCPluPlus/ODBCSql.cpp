@@ -56,7 +56,7 @@
 
 typedef struct STR_BINDING {
     SQLSMALLINT         cDisplaySize;           /* size to display  */
-    WCHAR* wszBuffer;             /* display buffer   */
+    WCHAR*              wszBuffer;             /* display buffer   */
     SQLLEN              indPtr;                 /* size or null     */
     BOOL                fChar;                  /* character col?   */
     struct STR_BINDING* sNext;                 /* linked list      */
@@ -109,7 +109,7 @@ int __cdecl wmain(int argc, _In_reads_(argc) WCHAR** argv)
     SQLHENV     hEnv = NULL;
     SQLHDBC     hDbc = NULL;
     SQLHSTMT    hStmt = NULL;
-    WCHAR* pwszConnStr;
+    WCHAR*      pwszConnStr;
     WCHAR       wszInput[SQL_QUERY_SIZE];
 
     // Allocate an environment
