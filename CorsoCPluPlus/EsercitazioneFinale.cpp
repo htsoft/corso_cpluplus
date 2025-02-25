@@ -16,4 +16,8 @@
 * Tra un dato ed il successivo intercorre un tempo di 1 decimo di secondo.
 * Al termine dell'elaborazione, anche se l'utente non ha effettuato alcuna richiesta
 * fornire i risultati di tutte el lavorazioni come indicato sopra.
+* 
+* Esempio contenuto file CSV
+* A;B;C;D;E     --> Riga corretta per le 5 linee
+* A;E;C;C;C		--> Solo la prima e la terza linea sono corrette, la seconda, la quarta e la quinta sono errata
 */
