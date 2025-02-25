@@ -105,5 +105,11 @@
     <ClCompile Include="SafeStack.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
+    <ClCompile Include="DataBaseConnectivity.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="ODBCSql.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

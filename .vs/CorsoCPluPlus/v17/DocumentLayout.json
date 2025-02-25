@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Progetti\\Corsi\\corso_cpluplus\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C914D348-F16B-4E99-9A72-4CAD702FB3DD}|CorsoCPluPlus\\CorsoCPluPlus.vcxproj|D:\\Progetti\\Corsi\\corso_cpluplus\\CorsoCPluPlus\\ODBCSql.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C914D348-F16B-4E99-9A72-4CAD702FB3DD}|CorsoCPluPlus\\CorsoCPluPlus.vcxproj|solutionrelative:CorsoCPluPlus\\ODBCSql.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C914D348-F16B-4E99-9A72-4CAD702FB3DD}|CorsoCPluPlus\\CorsoCPluPlus.vcxproj|D:\\Progetti\\Corsi\\corso_cpluplus\\CorsoCPluPlus\\DataBaseConnectivity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C914D348-F16B-4E99-9A72-4CAD702FB3DD}|CorsoCPluPlus\\CorsoCPluPlus.vcxproj|solutionrelative:CorsoCPluPlus\\DataBaseConnectivity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ODBCSql.cpp",
+              "DocumentMoniker": "D:\\Progetti\\Corsi\\corso_cpluplus\\CorsoCPluPlus\\ODBCSql.cpp",
+              "RelativeDocumentMoniker": "CorsoCPluPlus\\ODBCSql.cpp",
+              "ToolTip": "D:\\Progetti\\Corsi\\corso_cpluplus\\CorsoCPluPlus\\ODBCSql.cpp",
+              "RelativeToolTip": "CorsoCPluPlus\\ODBCSql.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-25T07:42:38.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataBaseConnectivity.cpp",
+              "DocumentMoniker": "D:\\Progetti\\Corsi\\corso_cpluplus\\CorsoCPluPlus\\DataBaseConnectivity.cpp",
+              "RelativeDocumentMoniker": "CorsoCPluPlus\\DataBaseConnectivity.cpp",
+              "ToolTip": "D:\\Progetti\\Corsi\\corso_cpluplus\\CorsoCPluPlus\\DataBaseConnectivity.cpp",
+              "RelativeToolTip": "CorsoCPluPlus\\DataBaseConnectivity.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-25T07:37:58.541Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
